@@ -29,13 +29,13 @@ const HeroSection = () => {
       <div className="col-span-7 place-self-center place-items-center grid lg:place-items-start">
         <h1 className="text-white max-w-2xl mb-4 lg:text-6xl text-4xl font-extrabold">
           <span className="text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            Hello, I'm{" "}
+           السلام عليكم{" "}
           </span>{" "}
           <br></br>
     <div className="text-3xl text-red-400">
     <Typewriter
   options={{
-    strings: ['HAIDER JAAFER KAREEM', 'WEB DEVELOPER','MOBILE DEVELOPER','API DEVELOPER'],
+    strings: ['حيدر جعفر كريم', 'مطور مواقع ويب','مطور تطبيقات موبايل','API مطور'],
     autoStart: true,
     loop: true,
     delay: 'natural',
@@ -46,7 +46,8 @@ const HeroSection = () => {
         </h1>
         <p className="text-[#ADB7BE] mb-6 textl-lg lg:text-xl">
         
-        Welcome To My Curriculum Vitae Of Programming Development 
+        
+        اهلا وسهلا بكم في السيرة الذاتية الالكترونية 
 
         </p>
         <div>
