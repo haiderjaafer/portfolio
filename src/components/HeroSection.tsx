@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import TypingAnimator from "react-typing-animator";
 import Typewriter from 'typewriter-effect';
+import Link from "next/link";
 
 
 
@@ -50,15 +51,15 @@ const HeroSection = () => {
         اهلا وسهلا بكم في السيرة الذاتية الالكترونية 
 
         </p>
-        <div>
-          <button className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white px-6 py-3 rounded-full mr-4">
-            Hire Me
-          </button>
-          <button className="m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
-            <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-              Download CV
+        <div className="flex items-center">
+          <Link href="/#contact" className="font-extrabold hover:text-black bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white px-6 py-3 rounded-full mr-4">
+           تواصل للعمل
+          </Link>
+          <Link href="/" className=" font-extrabold hover:text-fuchsia-500 m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
+            <span className="block bg-[#121212] hover:bg-slate-100 rounded-full px-5 py-2">
+             تحميل سيرة ذاتية
             </span>
-          </button>
+          </Link>
         </div>
       </div>
    

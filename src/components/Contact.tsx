@@ -42,26 +42,49 @@ const Contact = () => {
   return (
     <section
     id="contact"
-    className="grid md:grid-cols-2 my-12 md:my-12 py-18 gap-1  items-center"
+    className="grid md:grid-cols-1 my-12 md:my-12 py-18 gap-1  items-center"
   >
    
-    <div className="flex flex-col">
-   <Link href="https://www.facebook.com/" target="_blank" className="text-white" >facebook</Link>
-   <Link href="https://github.com/haiderjaafer" target="_blank"  className="text-white">https://github.com/haiderjaafer</Link>
-   
-   <label className="text-white">haiderjaafer6.9@gmail.com</label>
-   <label className="text-white">07705898725</label>
-    </div>
+ 
 
   
-    <div className="text-right z-10">
-      <h5 className="text-xl font-bold text-white my-2">
+    <div className="text-right ">
+      <h5 className=" font-extrabold text-3xl text-white my-2">
         للاتصال
       </h5>
-      <p className="text-[#ADB7BE] mb-4 text-right ">
-       هذة هي وسائل التواصل التابعة لي ودائما هي مفتوحة لاي سؤال اي استفسار
+      <p className="text-[#ADB7BE] mb-4 text-right font-extrabold ">
+       هذة هي وسائل التواصل التابعة لي ودائما هي مفتوحة لاي سؤال او استفسار
        
       </p>
+
+      
+ 
+   
+      <ul className="text-white text-right pr-7 flex flex-col items-end list-none">
+  <li >
+    <Link
+      href="https://github.com/haiderjaafer"
+      target="_blank"
+      className="text-white font-extrabold hover:text-fuchsia-600 hover:underline hover:transition-colors"
+    >
+      https://github.com/haiderjaafer
+    </Link>
+  </li>
+  <li >
+    <label className="text-white font-extrabold hover:text-fuchsia-600 hover:underline hover:transition-colors cursor-pointer">
+      haiderjaafer6.9@gmail.com
+    </label>
+  </li>
+  <li >
+    <label className="text-white font-extrabold hover:text-fuchsia-600 hover:underline hover:transition-colors cursor-pointer">
+      07705898725
+    </label>
+  </li>
+</ul>
+
+
+   
+   
     
     </div>
   </section>
