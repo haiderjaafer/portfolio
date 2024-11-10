@@ -10,10 +10,10 @@ const navLinks = [
     title: "من أنا",
     path: "#about",
   },
-  {
-    title: "المشاريع",
-    path: "#projects",
-  },
+  // {
+  //   title: "المشاريع",
+  //   path: "#projects",
+  // },
   // {
   //   title: "الاتصال",
   //   path: "/ContactSection",

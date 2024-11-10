@@ -52,7 +52,7 @@ const Contact = () => {
       <h5 className=" font-extrabold text-3xl text-white my-2">
         للاتصال
       </h5>
-      <p className="text-[#ADB7BE] mb-4 text-right font-extrabold ">
+      <p className="text-[#ADB7BE] mb-4 text-right font-extrabold text-2xl ">
        هذة هي وسائل التواصل التابعة لي ودائما هي مفتوحة لاي سؤال او استفسار
        
       </p>

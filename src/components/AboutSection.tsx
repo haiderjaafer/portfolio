@@ -114,13 +114,13 @@ const AboutSection = () => {
         <Image src="/images/about-image.png" width={500} height={500} alt="about"  className="rounded-lg"/>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4 text-right">من أنا</h2>
-          <p className={`text-base  text-right rtl:text-right tracking-normal lg:text-lg ${almarai.className}` }>
+          <p className={`font-extrabold text-2xl  text-right rtl:text-right tracking-normal lg:text-lg ` }>
           أنا مطور ويب وتطبيقات موبايل ولدي شغف بالإبداع
  تطبيقات الويب وتطبيقات الموبايل التفاعلية وسريعة الاستجابة أنا سريع التعلم  
 أتطلع إلى توسيع معرفتي ومهاراتي 
  أنا متحمس للعمل مع الآخرين لإنشاء تطبيقات مذهلة 
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start mt-8 ">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}

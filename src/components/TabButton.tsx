@@ -19,13 +19,13 @@ const TabButton = ({ active, selectTab, children }:any) => {
 
   return (
     <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold  hover:text-white ${buttonClasses} ${almarai.className} `}>
+      <p className={`mr-3 font-extrabold text-2xl   hover:text-white ${buttonClasses}  `}>
         {children}
       </p>
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className={`h-1 bg-primary-500 mt-2 mr-3 ${almarai.className}` }        
+        className={`h-1 bg-primary-500 mt-2 mr-3 ` }        
       ></motion.div>
     </button>
   );
