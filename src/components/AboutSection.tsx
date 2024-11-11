@@ -115,57 +115,45 @@ const AboutSection = () => {
   // Assuming 'tab' is a string that represents the current tab ID
 const tabItem = TAB_DATA.find((t) => t.id === tab);
 
-  return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 ">
-        <Image src="/images/about-image.png" width={500} height={500} alt="about"  className="rounded-lg"/>
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4 text-right">من أنا</h2>
-          <p className={`lg:font-extrabold lg:text-2xl font-bold text-base   text-right rtl:text-right tracking-normal  ` }>
-          أنا مطور ويب وتطبيقات موبايل ولدي شغف بالإبداع
- تطبيقات الويب وتطبيقات الموبايل التفاعلية وسريعة الاستجابة أنا سريع التعلم  
-أتطلع إلى توسيع معرفتي ومهاراتي 
- أنا متحمس للعمل مع الآخرين لإنشاء تطبيقات مذهلة 
-          </p>
-          <div className="flex flex-row justify-start mt-8 ">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              المهارات{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              التعليم{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("courses")}
-              active={tab === "courses"}
-            >
-              {" "}
-              الدورات{" "}
-            </TabButton>
-
-            <TabButton
-              selectTab={() => handleTabChange("bio")}
-              active={tab === "bio"}
-              
-            >
-              {" "}
-              معلومات السكن{" "}
-            </TabButton>
-          </div>
-          <div className="mt-8">
+return (
+  <section className="text-white" id="about">
+    <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <Image
+        src="/images/about-image.png"
+        width={500}
+        height={500}
+        alt="about"
+        className="rounded-lg"
+      />
+      <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+        <h2 className="text-4xl font-bold text-white mb-4 text-right">من أنا</h2>
+        <p className="lg:font-extrabold lg:text-2xl font-bold text-base text-right rtl:text-right tracking-normal">
+          أنا مطور ويب وتطبيقات موبايل ولدي شغف بالإبداع تطبيقات الويب وتطبيقات الموبايل
+          التفاعلية وسريعة الاستجابة. أنا سريع التعلم وأتطلع إلى توسيع معرفتي ومهاراتي.
+          أنا متحمس للعمل مع الآخرين لإنشاء تطبيقات مذهلة.
+        </p>
+        <div className="flex flex-row justify-start mt-8">
+          <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
+            المهارات
+          </TabButton>
+          <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>
+            التعليم
+          </TabButton>
+          <TabButton selectTab={() => handleTabChange("courses")} active={tab === "courses"}>
+            الدورات
+          </TabButton>
+          <TabButton selectTab={() => handleTabChange("bio")} active={tab === "bio"}>
+            معلومات السكن
+          </TabButton>
+        </div>
+        
+        {isPending && <div className="mt-4 text-yellow-500">Loading...</div>}
+        <div className="mt-8">
           {tabItem ? tabItem.content : <div>Content not found</div>}
-          </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 };
-
 export default AboutSection;
