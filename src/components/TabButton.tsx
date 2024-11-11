@@ -1,20 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Inter,Noto_Kufi_Arabic, Rakkas,Noto_Sans_Arabic,Almarai } from "next/font/google";
+import { TabButtonDataType } from "@/types";
 
-const kufiArabic = Noto_Kufi_Arabic({ subsets: ["arabic"],weight:['300','600'] });
-const notoSansArabic = Noto_Sans_Arabic({ subsets: ["arabic"],weight:['900']});
 
-const rakkas = Rakkas({ subsets: ["arabic"],weight:['400']});
 
-const almarai = Almarai({ subsets: ["arabic"],weight:["800"]});
 
 const variants = {
   default: { width: 0 },
   active: { width: "calc(100% - 0.75rem)" },
 };
 
-const TabButton = ({ active, selectTab, children }:any) => {
+const TabButton = ({ active, selectTab, children }:TabButtonDataType) => {
   const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
 
   return (

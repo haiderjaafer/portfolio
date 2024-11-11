@@ -4,10 +4,14 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import { navLinksProps } from "@/types";
 
-const navLinks = [
+
+
+
+const navLinks :navLinksProps[] = [
   {
-    title: "من أنا",
+    tittle: "من أنا",
     path: "#about",
   },
   // {
@@ -19,7 +23,7 @@ const navLinks = [
   //   path: "/ContactSection",
   // },
   {
-    title: "الاتصال",
+    tittle: "الاتصال",
     path: "#contact",
   },
 ];
@@ -60,7 +64,7 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink  href={link.path} title={link.title} />
+                <NavLink  href={link.path} tittle={link.tittle} />
               </li>
             ))}
           </ul>

@@ -2,18 +2,20 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import { Inter,Noto_Kufi_Arabic, Rakkas,Noto_Sans_Arabic,Almarai } from "next/font/google";
+import {  Almarai } from "next/font/google";
+import { TabData } from "@/types";
 
 
-const rakkas = Rakkas({ subsets: ["arabic"],weight:['400']});
 
-const notoSansArabic = Noto_Sans_Arabic({ subsets: ["arabic"],weight:['900']});
+
+
+
 
 const almarai = Almarai({ subsets: ["arabic"],weight:["800"]});
 
-const TAB_DATA :any[] = [
+const TAB_DATA :TabData[] = [
   {
-    title: "Skills",
+    tittle: "Skills",
     id: "skills",
     content: (
       <div className="flex gap-6">
@@ -49,7 +51,7 @@ const TAB_DATA :any[] = [
     ),
   },
   {
-    title: "Education",
+    tittle: "Education",
     id: "education",
     content: (
       <ul className="list-none text-right pl-2">
@@ -59,7 +61,7 @@ const TAB_DATA :any[] = [
     ),
   },
   {
-    title: "Courses",
+    tittle: "Courses",
     id: "courses",
     content: (
       <ul className="list-disc pl-2">
@@ -75,7 +77,7 @@ const TAB_DATA :any[] = [
   },
 
   {
-    title: "Bio",
+    tittle: "Bio",
     id: "bio",
     content: (
       <ul className="list-none   pl-2">
@@ -104,11 +106,14 @@ const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
 
-  const handleTabChange = (id:any) => {
+  const handleTabChange = (id:string) => {
     startTransition(() => {
       setTab(id);
     });
   };
+
+  // Assuming 'tab' is a string that represents the current tab ID
+const tabItem = TAB_DATA.find((t) => t.id === tab);
 
   return (
     <section className="text-white" id="about">
@@ -155,7 +160,7 @@ const AboutSection = () => {
             </TabButton>
           </div>
           <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+          {tabItem ? tabItem.content : <div>Content not found</div>}
           </div>
         </div>
       </div>

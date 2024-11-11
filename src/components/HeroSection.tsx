@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Typewriter from 'typewriter-effect';
 import Link from "next/link";
-import { Icons, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 
 
 
@@ -58,7 +58,30 @@ const HeroSection = () => {
           </Link>
           <Link href="/" onClick={()=>{
             
-            toast.info("سيتم العمل على تنزيل نسخة من السيرة الذاتية",{icon: ({theme, type}) =>  "🛠️"})
+            // toast.info("سيتم العمل على تنزيل نسخة من السيرة الذاتية",{icon: ({theme, type}) =>  "🛠️"})
+
+            toast.info("سيتم العمل على تنزيل نسخة من السيرة الذاتية", {
+              icon: ({ theme, type }) => {
+                // Customize the icon based on the theme and type
+                if (theme === "dark") {
+                  return "🌙"; // Example icon for dark theme
+                } else if (theme === "light") {
+                  return "☀️"; // Example icon for light theme
+                }
+            
+                // You can also customize based on the type (e.g., "info", "success", "error")
+                switch (type) {
+                  case "info":
+                    return "ℹ️";
+                  case "success":
+                    return "✅";
+                  case "error":
+                    return "❌";
+                  default:
+                    return "🛠️"; // Default icon
+                }
+              },
+            });
 
           }} className=" font-extrabold hover:text-fuchsia-500 m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
             <span className="block bg-[#121212] hover:bg-slate-100 rounded-full px-5 py-2">
