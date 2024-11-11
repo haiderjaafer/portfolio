@@ -52,8 +52,8 @@ const TAB_DATA :any[] = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li className={`font-bold font-serif ${almarai.className} `}>علوم الحاسبات</li>
+      <ul className="list-none text-right pl-2">
+        <li className={`font-bold font-serif ${almarai.className} `}>بكلوريوس علوم حاسبات</li>
         <li className={`font-bold font-serif  ${almarai.className} `}>الجامعة التكنولوجية</li>
       </ul>
     ),
@@ -63,6 +63,8 @@ const TAB_DATA :any[] = [
     id: "courses",
     content: (
       <ul className="list-disc pl-2">
+        <li>NextJS</li>
+        <li>React</li>
         <li>English</li>
         <li>Sql Server</li>
         <li>C#</li>
@@ -114,7 +116,7 @@ const AboutSection = () => {
         <Image src="/images/about-image.png" width={500} height={500} alt="about"  className="rounded-lg"/>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4 text-right">من أنا</h2>
-          <p className={`font-extrabold text-2xl  text-right rtl:text-right tracking-normal lg:text-lg ` }>
+          <p className={`lg:font-extrabold lg:text-2xl font-bold text-base   text-right rtl:text-right tracking-normal  ` }>
           أنا مطور ويب وتطبيقات موبايل ولدي شغف بالإبداع
  تطبيقات الويب وتطبيقات الموبايل التفاعلية وسريعة الاستجابة أنا سريع التعلم  
 أتطلع إلى توسيع معرفتي ومهاراتي 

@@ -1,11 +1,9 @@
-
-
 "use client";
 import React from "react";
 import Image from "next/image";
-import TypingAnimator from "react-typing-animator";
 import Typewriter from 'typewriter-effect';
 import Link from "next/link";
+import { Icons, toast } from 'react-toastify';
 
 
 
@@ -48,7 +46,7 @@ const HeroSection = () => {
 />
     </div>
         </h1>
-        <p className="text-[#ADB7BE] mb-6 textl-lg lg:text-x2 lg:font-extrabold font-extrabold text-2xl">
+        <p className="text-[#ADB7BE] text-center mb-6 textl-lg lg:text-x2 lg:font-extrabold font-extrabold text-2xl">
         
         
         اهلا وسهلا بكم في السيرة الذاتية الالكترونية 
@@ -58,7 +56,11 @@ const HeroSection = () => {
           <Link href="/#contact" className="font-extrabold hover:text-black bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white px-6 py-3 rounded-full mr-4">
            تواصل للعمل
           </Link>
-          <Link href="/" className=" font-extrabold hover:text-fuchsia-500 m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
+          <Link href="/" onClick={()=>{
+            
+            toast.info("سيتم العمل على تنزيل نسخة من السيرة الذاتية",{icon: ({theme, type}) =>  "🛠️"})
+
+          }} className=" font-extrabold hover:text-fuchsia-500 m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
             <span className="block bg-[#121212] hover:bg-slate-100 rounded-full px-5 py-2">
              تحميل سيرة ذاتية
             </span>
