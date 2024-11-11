@@ -11,9 +11,9 @@ interface DataProps {
 const MenuOverlay = ({ links }: DataProps) => {
   return (
     <ul className="flex flex-col py-4 items-center">
-      {links.map((link : any, index:any) => (
+      {links.map((link: navLinksProps, index: number) => (
         <li key={index}>
-          <NavLink href={link.path} tittle={link.title} />
+          <NavLink href={link.path} tittle={link.tittle} />
         </li>
       ))}
     </ul>
